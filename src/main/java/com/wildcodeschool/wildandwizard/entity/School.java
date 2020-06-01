@@ -17,6 +17,7 @@ public class School {
         this.country = country;
     }
 
+
     public Long getId() {
         return id;
     }

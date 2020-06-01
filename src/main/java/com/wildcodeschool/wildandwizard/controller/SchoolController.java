@@ -1,13 +1,21 @@
 package com.wildcodeschool.wildandwizard.controller;
 
+import com.wildcodeschool.wildandwizard.entity.School;
 import com.wildcodeschool.wildandwizard.repository.SchoolRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class SchoolController {
+    private final static String DB_URL = "jdbc:mysql://localhost:3306/spring_jdbc_quest?serverTimezone=GMT";
+    private final static String DB_USER = "h4rryp0tt3r";
+    private final static String DB_PASSWORD = "Horcrux4life!";
 
     private SchoolRepository repository = new SchoolRepository();
 
